@@ -1,5 +1,7 @@
 set nocompatible
 
+set nocompatible
+
 " color
 syntax enable
 set background=dark
@@ -16,6 +18,7 @@ set number           " show line numbers
 set showcmd          " show command in bottom bar
 set cursorline       " highlight current line
 filetype indent on   " load filetype-specific indent files
+filetype plugin on
 set wildmenu         " visual autocomplete for command menu
 set lazyredraw       " redraw only when we need to.
 set showmatch        " highlight matching [{()}]
@@ -52,3 +55,10 @@ inoremap jk <esc>
 
 " toggle gundo
 "nnoremap <leader>u :GundoToggle<CR>
+
+""" Fuzzy Finding
+set path+=**    " add subdirectories to path
+"set wildmenu
+" now we can use `:find <filename> <TAB>` to fuzzy search among current and
+" sub-folders
+
