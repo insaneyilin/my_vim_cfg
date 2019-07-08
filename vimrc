@@ -1,3 +1,4 @@
+set nocompatible
 
 " color
 syntax enable
@@ -5,6 +6,7 @@ set background=dark
 colorscheme solarized
 
 " space & tab
+set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4    " number of spaces in tab when editing
 set expandtab        " tabs are spaces
