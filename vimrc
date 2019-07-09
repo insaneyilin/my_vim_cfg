@@ -1,6 +1,8 @@
+" disable compatible mode
 set nocompatible
 
-set nocompatible
+" set runtime path
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " color
 syntax enable
