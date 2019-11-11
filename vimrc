@@ -1,10 +1,13 @@
 " disable compatible mode
 set nocompatible
 
+" Pathogen
+execute pathogen#infect()
+
 " color
 syntax enable
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
 
 " space & tab
 set backspace=indent,eol,start
@@ -52,8 +55,24 @@ nnoremap gV `[v`]
 " remap <ESC>
 inoremap jk <esc>
 
-" toggle gundo
-"nnoremap <leader>u :GundoToggle<CR>
+""" NERDTree remapping
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+"" NERDTree git
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "modified",
+    \ "Staged"    : "staged",
+    \ "Untracked" : "untracked",
+    \ "Renamed"   : "renamed",
+    \ "Unmerged"  : "unmerged",
+    \ "Deleted"   : "deleted",
+    \ "Dirty"     : "dirty",
+    \ "Clean"     : "clean",
+    \ 'Ignored'   : "ignored",
+    \ "Unknown"   : "?"
+    \ }
 
 """ Fuzzy Finding
 set path+=**    " add subdirectories to path
