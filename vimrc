@@ -1,9 +1,6 @@
 " disable compatible mode
 set nocompatible
 
-" set runtime path
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 " color
 syntax enable
 set background=dark
@@ -57,13 +54,6 @@ inoremap jk <esc>
 
 " toggle gundo
 "nnoremap <leader>u :GundoToggle<CR>
-
-" CtrlP settings
-"let g:ctrlp_match_window = 'bottom,order:ttb'
-"let g:ctrlp_switch_buffer = 0
-"let g:ctrlp_working_path_mode = 0
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlP'
 
 """ Fuzzy Finding
 set path+=**    " add subdirectories to path
