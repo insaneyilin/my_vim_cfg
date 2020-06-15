@@ -80,3 +80,21 @@ set path+=**    " add subdirectories to path
 " now we can use `:find <filename> <TAB>` to fuzzy search among current and
 " sub-folders
 
+""" Tag Jumping
+" use :MakeTags to create the `tags` file
+" (may need to install ctags first):
+" $ sudo snap install universal-ctags
+command! MakeTags !ctags -R .
+" NOW WE CAN:
+" - Use ^] to jump to tag under cursor
+" - Use g^] for ambiguous tags
+" - Use ^t to jump back up the tag stack
+
+" SNIPPETS
+" Read an empty HTML template and move cursor to title
+nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
+" Read an empty C++ template
+nnoremap ,cpp :-1read $HOME/.vim/.skeleton.cpp<CR>
+" Read an empty python template
+nnoremap ,py :-1read $HOME/.vim/.skeleton.py<CR>
+
