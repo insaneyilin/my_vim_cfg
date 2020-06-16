@@ -92,9 +92,11 @@ command! MakeTags !ctags -R .
 
 " SNIPPETS
 " Read an empty HTML template and move cursor to title
-nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
-" Read an empty C++ template
-nnoremap ,cpp :-1read $HOME/.vim/.skeleton.cpp<CR>
-" Read an empty python template
-nnoremap ,py :-1read $HOME/.vim/.skeleton.py<CR>
+nnoremap ,html :-1read $HOME/.vim/snippets/.skeleton.html<CR>3jwf>a
+" C++ template
+nnoremap ,cpp :-1read $HOME/.vim/snippets/.skeleton.cpp<CR>
+" Python template
+nnoremap ,py :-1read $HOME/.vim/snippets/.skeleton.py<CR>
+" CMakeLists.txt template
+nnoremap ,cl :-1read $HOME/.vim/snippets/.skeleton.cmakelists<CR>
 
