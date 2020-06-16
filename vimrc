@@ -90,7 +90,7 @@ command! MakeTags !ctags -R .
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
 
-" SNIPPETS
+""" SNIPPETS
 " Read an empty HTML template and move cursor to title
 nnoremap ,html :-1read $HOME/.vim/snippets/.skeleton.html<CR>3jwf>a
 " C++ template
@@ -99,4 +99,25 @@ nnoremap ,cpp :-1read $HOME/.vim/snippets/.skeleton.cpp<CR>
 nnoremap ,py :-1read $HOME/.vim/snippets/.skeleton.py<CR>
 " CMakeLists.txt template
 nnoremap ,cl :-1read $HOME/.vim/snippets/.skeleton.cmakelists<CR>
+
+""" DoxygenToolkit.vim
+" https://github.com/vim-scripts/DoxygenToolkit.vim
+"let g:DoxygenToolkit_paramTag_pre="@param: "
+"let g:DoxygenToolkit_returnTag="@returns: "
+"let g:DoxygenToolkit_blockHeader="/*******************************************************"
+"let g:DoxygenToolkit_blockFooter="*******************************************************/"
+let g:DoxygenToolkit_authorName="Yilin Gui, yilin.gui@gmail.com"
+let s:licenseTag = "\<enter>"
+let s:licenseTag = s:licenseTag . "Copyright 2020 insaneyilin All Rights Reserved.\<enter>"
+let s:licenseTag = s:licenseTag . "\<enter>"
+let s:licenseTag = s:licenseTag . "*******************************************************/"
+let g:DoxygenToolkit_licenseTag = s:licenseTag
+
+let g:DoxygenToolkit_briefTag_funcName="no"
+let g:doxygen_enhanced_color=1
+"let g:DoxygenToolkit_commentType="C++"
+let g:DoxygenToolkit_classTag = "@class "
+" use :Dox to generate function descriptioin
+" use :DoxAuthor to generate Author info.
+" use :DoxLic to generate License info.
 
