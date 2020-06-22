@@ -110,7 +110,6 @@ let g:DoxygenToolkit_authorName="Yilin Gui, yilin.gui@gmail.com"
 let s:licenseTag = "\<enter>"
 let s:licenseTag = s:licenseTag . "Copyright 2020 insaneyilin All Rights Reserved.\<enter>"
 let s:licenseTag = s:licenseTag . "\<enter>"
-let s:licenseTag = s:licenseTag . "*******************************************************/"
 let g:DoxygenToolkit_licenseTag = s:licenseTag
 
 let g:DoxygenToolkit_briefTag_funcName="no"
