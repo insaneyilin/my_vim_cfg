@@ -39,6 +39,7 @@ set foldmethod=indent   " fold based on indent level
 let mapleader=","    " leader is a comma `,`
 
 " turn off search highlight
+" `nnoremap` means mapping in normal mode
 nnoremap <leader><space> :nohlsearch<CR>
 
 " space open/closes folds
@@ -53,7 +54,22 @@ nnoremap k gk
 nnoremap gV `[v`]
 
 " remap <ESC>
+" `inoremap` means mapping in insert mode
 inoremap jk <esc>
+
+"" Insert current filename
+" To inserts the current filename without the extension at the cursor position,
+" when you are in insert mode.
+":inoremap <leader>fn <C-R>=expand("%:t:r")<CR>
+" To keep the extension use:
+:inoremap <leader>fn <C-R>=expand("%:t")<CR>
+" To insert the absolute path of the directory the file is in use:
+:inoremap <leader>fd <C-R>=expand("%:p:h")<CR>
+" To insert the relative path of the directory the file is in use:
+":inoremap <leader>fn <C-R>=expand("%:h")<CR>
+" To insert the name of the innermost directory (the one containing the
+" current file) use:
+":inoremap <leader>fn <C-R>=expand("%:p:h:t")<CR>
 
 """ NERDTree remapping
 map <C-n> :NERDTreeToggle<CR>
