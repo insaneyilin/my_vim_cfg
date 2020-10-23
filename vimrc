@@ -25,6 +25,10 @@ set wildmenu         " visual autocomplete for command menu
 set lazyredraw       " redraw only when we need to.
 set showmatch        " highlight matching [{()}]
 
+" complete's default value are .,w,b,u,t,i
+" remove i for not scanning included files
+set complete=.,w,b,u,t
+
 " searching
 set incsearch        " search as characters are entered
 set hlsearch         " highlight matches
