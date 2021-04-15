@@ -6,6 +6,8 @@ execute pathogen#infect()
 
 " color
 syntax enable
+packadd! dracula
+colorscheme dracula
 "set background=dark
 "colorscheme solarized
 
