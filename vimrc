@@ -1,6 +1,10 @@
 " disable compatible mode
 set nocompatible
 
+set nobackup
+set undofile
+set undodir=~/.vim/undodir
+
 " Pathogen
 execute pathogen#infect()
 
@@ -8,8 +12,6 @@ execute pathogen#infect()
 syntax enable
 packadd! dracula
 colorscheme dracula
-"set background=dark
-"colorscheme solarized
 
 " space & tab
 set backspace=indent,eol,start
