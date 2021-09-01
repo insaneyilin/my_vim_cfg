@@ -79,6 +79,10 @@ inoremap jk <esc>
 " current file) use:
 ":inoremap <leader>fn <C-R>=expand("%:p:h:t")<CR>
 
+"" Quick replace words
+nnoremap <leader>v viw"0p
+vnoremap <leader>v    "0p
+
 """ NERDTree remapping
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
