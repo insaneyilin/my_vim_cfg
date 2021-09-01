@@ -2,10 +2,10 @@
         path = pack/vendor/start/nerdtree
         url = https://github.com/scrooloose/nerdtree.git
 
-[submodule "bundle/nerdtree-git-plugin"]
-        path = bundle/nerdtree-git-plugin
-        url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 [submodule "pack/themes/opt/dracula"]
 	path = pack/themes/opt/dracula
 	url = https://github.com/dracula/vim.git
 
+[submodule "pack/mbbill/start/undotree"]
+	path = pack/mbbill/start/undotree
+	url = https://github.com/mbbill/undotree.git
